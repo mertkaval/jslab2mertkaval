@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+    <script>
+        //question 1-rotatedleft
+
+        function rotateleft(input) {
+            var result = input.shift();
+            var push = input.push(result);
+            return input;
+
+
+        }
+
+        console.log(rotateleft([1, 2, 3]));
+        console.log(rotateleft([5, 11, 9]));
+        console.log(rotateleft([7, 0, 0]));
+
+
+
+
+
+
+
+        //question 2-reverse
+
+        function myreverse(myarray) {
+            myarray.reverse();
+            return myarray;
+        }
+
+        console.log(myreverse([1, 2, 3]));
+        console.log(myreverse([5, 11, 9]));
+        console.log(myreverse([7, 0, 0]));
+
+
+        //question 3-has23
+
+        function has(myarray) {
+
+            var check1 = myarray.indexOf(2);
+            var check2 = myarray.indexOf(3);
+            if (check1 != -1 || check2 != -1) {
+
+                return true;
+            } else {
+
+                return false;
+
+            }
+
+
+        }
+        console.log(has([2, 5]));
+        console.log(has([4, 3]));
+        console.log(has([4, 5]));
+
+        //question 4-fix
+
+        function fix(inputarray) {
+
+            for (i = 0; i < inputarray.length; i++) {
+                if (inputarray[i] == 3) {
+                    inputarray[i] = 0;
+                }
+
+            }
+
+            return inputarray;
+        }
+        console.log(fix([1, 2, 3]));
+        console.log(fix([2, 3, 5]));
+        console.log(fix([1, 2, 1]));
+
+        //question 5-max
+
+        function maximum(findmax) {
+            var first = findmax[0];
+            var middle = findmax[1];
+            var last = findmax[2];
+            return Math.max(first, middle, last);
+        }
+        console.log(maximum([1, 2, 3]));
+        console.log(maximum([1, 5, 3]));
+        console.log(maximum([5, 2, 3]));
+
+        //question 6-swap
+
+        function changefirstlast(swapends) {
+            // var first = swapends[0];
+            // var last  = swapends.length[i];
+
+            // let del   = swapends.shift[first];
+            // let 
+
+            var myarray = swapends.reverse();
+
+            return myarray;
+
+
+
+        }
+
+
+        console.log(changefirstlast([1, 2, 3, 4]));
+        console.log(changefirstlast([1, 2, 3]));
+        console.log(changefirstlast([8, 6, 7, 9, 5]));
+
+
+        //question 7-unlucky
+
+        function unlucky(number) {
+            for (i = 0; i < number.length; i++) {
+                if (number[i] == 1 && number[i + 1] == 3) {
+                    return true;
+                }
+
+            }
+            return false;
+        }
+        console.log(unlucky([1, 3, 4, 5]));
+        console.log(unlucky([2, 1, 3, 4, 5]));
+        console.log(unlucky([1, 1, 1]));
+
+
+
+        //question 8-create new array
+
+        function newarray(array1, array2) {
+            var first = array1[0];
+            var second = array2[0];
+            if (array1.length == 0) {
+
+                return [second];
+
+            } else if (array2.length == 0) {
+                return [first];
+            } else {
+                return [first, second];
+            }
+
+
+        }
+
+        console.log(newarray([1, 2, 3], [7, 9, 8]));
+        console.log(newarray([1], [2]));
+        console.log(newarray([1, 7], []));
+
+        //question 9-everywhere
+
+        function everywhere(myarray, mynumber) {
+            for (i = 0; i < myarray.length; i = i + 2) {
+
+                if (mynumber != myarray[i + 1] && mynumber != myarray[i]) {
+                    return false;
+                }
+            }
+
+
+            return true;
+
+        }
+        console.log(everywhere([1, 2, 1, 3], 1));
+        console.log(everywhere([1, 2, 1, 3], 2));
+        console.log(everywhere([1, 2, 1, 3, 4], 1));
+
+        //question 10-twoten
+        function tenrun(myarray) {
+
+
+
+            for (i = 0; i < myarray.length - 1; i++) {
+
+                var modten = myarray[i] % 10;
+                if (modten == 0 && myarray[i + 1] % 10 != 0) {
+                    myarray[i + 1] = myarray[i];
+                }
+
+            }
+            return myarray;
+        }
+
+        console.log(tenrun([2, 10, 3, 4, 20, 5]));
+        console.log(tenrun([10, 1, 20, 2]));
+        console.log(tenrun([10, 1, 9, 20]));
+
+        //question 11-twotwo
+
+        function twotwo(check) {
+            for (i = 0; i < check.length; i++) {
+                var last = check[check.length - 1];
+                var lastbefore = check[check.length - 2];
+
+                if (check[i] == 2 && check[i + 1] == 2 && last != 2) {
+
+                    return true;
+                } else if (last == 2 && lastbefore == 2) {
+                    return true;
+                }
+
+            }
+            return false;
+        }
+
+        console.log(twotwo([4, 2, 2, 3]));
+        console.log(twotwo([2, 2, 3]));
+        console.log(twotwo([2, 2, 4, 2]));
+        console.log(twotwo([2, 1, 2, 2]));
+
+        //question 12-return
+
+        function shiftleft(myarray) {
+
+            //            var firstelement = myarray[0];
+
+            var stepone = myarray.shift();
+
+            myarray.push(stepone);
+
+            return myarray;
+
+        }
+
+        console.log(shiftleft([6, 2, 5, 3]));
+        console.log(shiftleft([1, 2]));
+        console.log(shiftleft([1]));
+
+        //question 13-note
+
+        function evenodd(array) {
+            var even = [];
+            var odd = [];
+            for (i = 0; i < array.length; i++) {
+                if (array[i] % 2 === 0) {
+                    even.push(array[i]);
+
+
+
+                } else {
+                    odd.push(array[i]);
+                }
+
+
+
+            }
+
+            return even.concat(odd);
+        }
+        console.log(evenodd([1, 0, 1, 0, 0, 1, 1]));
+        console.log(evenodd([3, 3, 2]));
+        console.log(evenodd([2, 2, 2]));
+
+        
+        
+        
+        
+        
+        //question 14-fizzbuzz
+
+        function fizbuzz(first, end) {
+            
+                   
+            
+            var result=[];
+         
+            for (let counter = first; counter < end; counter++) {
+                
+              element=counter;
+                
+                if (element % 3 == 0 && element % 5 == 0) {
+                    
+                    result.push("FizBuzz");
+                    
+                    console.log("FizBuzz")
+                } 
+                else if (element % 3 == 0) {
+                    
+                    console.log("Fizz");
+                    
+                    result.push("Fizz");
+                } 
+                
+                else if (element % 5 == 0) {
+                    
+                    console.log("Buzz");
+                    
+                    result.push("Buzz");
+                    
+                } 
+                
+                
+                else {
+                    console.log(element);
+                    
+                    result.push("element");
+                    
+                }
+            }
+            
+            return result;
+        }
+        
+        console.log(fizbuzz(1,6));
+        console.log(fizbuzz(1,8));
+        console.log(fizbuzz(1,11));
+
+    </script>
+</body>
+
+</html>
